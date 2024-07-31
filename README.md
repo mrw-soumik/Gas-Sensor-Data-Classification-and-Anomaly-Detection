@@ -43,10 +43,27 @@ The dataset used for this project is the [Gas Sensors for Home Activity Monitori
 - The autoencoder model successfully detected anomalies in the sensor data.
 
 ## Installation
-To run the code in this repository, you will need to install the following dependencies:
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn tensorflow keras-tuner torch torchvision
+
+### For Google Colab
+Google Colab already has most of the required libraries pre-installed. You can run the notebook directly in Google Colab with minor adjustments. If you need to install any additional libraries, you can do so using:
+```python
+!pip install keras-tuner
+!pip install torch torchvision
 ```
+
+### For Local Development (Python IDE)
+To run the code in this repository locally, you will need to install the following dependencies:
+
+1. Create a virtual environment (optional but recommended):
+   ```bash
+   python -m venv env
+   source env/bin/activate  # On Windows, use `env\Scripts\activate`
+   ```
+
+2. Install the dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 ## Usage
 1. Clone the repository:
@@ -54,6 +71,7 @@ pip install pandas numpy matplotlib seaborn scikit-learn tensorflow keras-tuner 
    git clone https://github.com/yourusername/gas-sensor-data-classification.git
    cd gas-sensor-data-classification
    ```
+
 2. Run the Jupyter notebook:
    ```bash
    jupyter notebook Gas_Sensor_Data_Classification_and_Anamoly_Detection.ipynb
@@ -69,3 +87,16 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 4. Paszke, A., Gross, S., Massa, F., Lerer, A., Bradbury, J., Chanan, G., ... & Chintala, S. (2019). PyTorch: An Imperative Style, High-Performance Deep Learning Library. In *Advances in Neural Information Processing Systems* (pp. 8024-8035).
 5. Brownlee, J. (2017). *Machine Learning Mastery with Python: Understand Your Data, Create Accurate Models, and Work Projects End-to-End*. Machine Learning Mastery.
 6. Kaggle. (n.d.). *Gas Sensors for Home Activity Monitoring Data Set*. Retrieved from [https://www.kaggle.com/datasets/gauravgawade951999/gas-sensors-for-home-activity-monitoring-data-set](https://www.kaggle.com/datasets/gauravgawade951999/gas-sensors-for-home-activity-monitoring-data-set).
+
+## requirements.txt
+```txt
+pandas==1.3.3
+numpy==1.21.2
+matplotlib==3.4.3
+seaborn==0.11.2
+scikit-learn==0.24.2
+tensorflow==2.6.0
+keras-tuner==1.0.4
+torch==1.9.0
+torchvision==0.10.0
+```
